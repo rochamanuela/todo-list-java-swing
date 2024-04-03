@@ -3,6 +3,8 @@ package com.todolist.view;
 import javax.swing.*;
 import com.todolist.view.components.Button;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -51,6 +53,12 @@ public class HomeFrame extends JFrame {
                 dispose();
             }
         });
+
+        JLabel nomeUsuarioLabel = new JLabel("Manuela Rocha"); // deverá receber o nome do usuário que vem do banco
+        nomeUsuarioLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        nomeUsuarioLabel.setForeground(new Color(38, 50, 56));
+        nomeUsuarioLabel.setBounds(98, 29, 400, 50);
+        getContentPane().add(nomeUsuarioLabel);
 
         JLabel wallpaperLabel = new JLabel();
         ImageIcon wallpaperIcon = new ImageIcon(getClass().getResource("/com/todolist/view/images/home.png"));
